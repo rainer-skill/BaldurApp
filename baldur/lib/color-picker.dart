@@ -15,8 +15,8 @@ class ColorSelector extends StatefulWidget {
 }
 
 class _ColorSelectorState extends State<ColorSelector> {
-  Color pickerColor = Color(0xff443a49);
-  Color currentColor = Color(0xff443a49);
+  Color pickerColor = Color(0xff443a);
+  Color currentColor = Color(0xff443a);
 
     void changeColor(Color color) {
     setState(() => pickerColor = color);
@@ -37,11 +37,11 @@ class _ColorSelectorState extends State<ColorSelector> {
               child: Theme(
                   data: Theme.of(context),
                   child: AlertDialog(
-                    contentTextStyle: TextStyle(color: Colors.white),
+                    contentTextStyle: TextStyle(color: Colors.black),
                     title: const Text('Pick a color!'),
                     content: SingleChildScrollView(
                       child: ColorPicker(
-                        pickerColor: Colors.white,
+                        pickerColor: currentColor,
                         enableAlpha: false,
                         onColorChanged: changeColor,
                         enableLabel: true,

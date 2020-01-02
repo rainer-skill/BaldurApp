@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Color pickerColor = Color(0xff443a49);
   Color currentColor = Color(0xff443a49);
-  List<Color> colors = new List(3);
+  List<Color> colors = new List(3).map((val) => Color(0xff443a49)).toList();
 
   void setColor(Color color, int index) {
     // colors.removeAt(index);
